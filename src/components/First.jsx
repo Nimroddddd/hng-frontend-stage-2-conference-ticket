@@ -22,8 +22,9 @@ export default function First(props) {
     const ticketAmount = localStorage.getItem("ticketAmount")
     const ticketTier = localStorage.getItem("ticketTier")
     setSelectedTicket(ticketTier)
-    setTicketAmount(ticketAmount)
+    if(ticketAmount) setTicketAmount(ticketAmount)
   }, [])
+  
 
   return (
     <>
@@ -33,19 +34,19 @@ export default function First(props) {
         <p className="text-center">📍04 Rumens road, Ikoyi, Lagos || March 15, 2025 | 7:00 PM</p>
       </div>
       <hr />
-      <p>Select Ticket Type:</p>
+      <p aria-label="ticket type">Select Ticket Type:</p>
       <div className='flex gap-3 justify-evenly w-full p-2'>
-        <div name="REGULAR" className={`cursor-pointer flex flex-col rounded-3xl border-indigo-900 border p-3 basis-1/3 ${selectedTicket === "REGULAR" && "bg-indigo-500"}`} onClick={() => handleSelectedTicketChange("REGULAR")}>
+        <div aria-label="regular" name="REGULAR" className={`cursor-pointer flex flex-col rounded-3xl border-indigo-900 border p-3 basis-1/3 ${selectedTicket === "REGULAR" && "bg-indigo-500"}`} onClick={() => handleSelectedTicketChange("REGULAR")}>
           <p>Free</p>
           <p>REGULAR ACCESS</p>
           <p>20/52</p>
         </div>
-        <div name="VIP" className={`cursor-pointer flex flex-col rounded-3xl border-indigo-900 border p-3 basis-1/3 ${selectedTicket === "VIP" && "bg-indigo-500"}`} onClick={() => handleSelectedTicketChange("VIP")}>
+        <div aria-label="vip" name="VIP" className={`cursor-pointer flex flex-col rounded-3xl border-indigo-900 border p-3 basis-1/3 ${selectedTicket === "VIP" && "bg-indigo-500"}`} onClick={() => handleSelectedTicketChange("VIP")}>
           <p>$150</p>
           <p>VIP ACCESS</p>
           <p>20/52</p>
         </div>
-        <div name="VVIP" className={`cursor-pointer flex flex-col rounded-3xl border-indigo-900 border p-3 basis-1/3 ${selectedTicket === "VVIP" && "bg-indigo-500"}`} onClick={() => handleSelectedTicketChange("VVIP")}>
+        <div aria-label="vvip" name="VVIP" className={`cursor-pointer flex flex-col rounded-3xl border-indigo-900 border p-3 basis-1/3 ${selectedTicket === "VVIP" && "bg-indigo-500"}`} onClick={() => handleSelectedTicketChange("VVIP")}>
           <p>$300</p>
           <p>VVIP ACCESS</p>
           <p>20/52</p>

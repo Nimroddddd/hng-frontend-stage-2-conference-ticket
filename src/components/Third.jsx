@@ -29,7 +29,7 @@ export default function Third(props) {
     <>
       <h1 className="text-3xl text-center">Your Ticket is Booked!</h1>
       <p className="text-center">Check your email for a copy or you can <span>download</span></p>
-      <div className="p-5 border shadow-2xl rounded-2xl">
+      <div className="p-0 sm:p-5 border border-indigo-950 shadow-2xl rounded-2xl">
         <div className=" bg-indigo-400 p-5 text-center rounded-3xl" >
           <p className="text-3xl">Techember Fest "25</p>
           <p>📍 04 Rumens road, Ikoyi, Lagos</p>
