@@ -72,30 +72,16 @@ export default function Second(props) {
     // localStorage.setItem("avatar", file)
   };
     
-  
-
-  const uploadedImage = uploadedImageUrl ? cld.image(uploadedImageUrl) : null;
 
   return (
     <>
       <form className="flex flex-col">
-        {/* <div className="flex flex-col gap-3">
-          <p>profile photo avatar</p>
-          <TextField
-            required
-            id="outline-required"
-            className="w-full"
-            {...register("avatar", {
-              required: "This field is required!",
-            })}
-          />
-          <p className="text-red-500">{errors.avatar?.message}</p>
-        </div> */}
         <div className="flex flex-col gap-3">
           <p>Upload Profile Photo</p>
           <label
             htmlFor="file-upload"
             className="bg-indigo-500 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-indigo-600 transition"
+            aria-label="selfie file upload"
           >
             Choose File
           </label>
@@ -110,13 +96,13 @@ export default function Second(props) {
           <div className="mt-5">
             <p>Uploaded Image Preview:</p>
             {/* <AdvancedImage cldImg={uploadedImage} /> */}
-            <img src={uploadedImageUrl} className="h-36" />
+            <img src={uploadedImageUrl} className="h-36"alt="selfie image"  />
           </div>
           )}
 
         </div>
         <div className="flex flex-col gap-3">
-          <p>Enter your name</p>
+          <p aria-label="full name">Enter your name</p>
           <TextField
             required
             id="outline-required"
@@ -130,10 +116,10 @@ export default function Second(props) {
               }
             }}
           />
-          <p className="text-red-500">{errors.name?.message}</p>
+          <p className="text-red-500" aria-label="name is required">{errors.name?.message}</p>
         </div>
         <div className="flex flex-col gap-3">
-          <p>Enter your email</p>
+          <p aria-label="email">Enter your email</p>
           <TextField
             required
             id="outline-required"
@@ -147,9 +133,9 @@ export default function Second(props) {
               }
             }}
           />
-          <p className="text-red-500">{errors.email?.message}</p>
+          <p className="text-red-500" aria-label="email is required">{errors.email?.message}</p>
         </div>
-        <div className="flex flex-col gap-3">
+        <div aria-label="special request" className="flex flex-col gap-3">
           <p>Special request?</p>
           <TextField
             id="outline-required"
