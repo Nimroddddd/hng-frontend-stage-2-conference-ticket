@@ -1,0 +1,22 @@
+{
+  "asset_id": "de9841faf96db1c444b3fcb4dcbd482e",
+  "public_id": "iiki0t2tgsak6dkm7dtd",
+  "version": 1739472668,
+  "version_id": "b9c5449eca29a91a7ebef5fad26d20da",
+  "signature": "ed7ee7bf5ab7fa17050daca3b5d2c2fd58f895ac",
+  "width": 1495,
+  "height": 1236,
+  "format": "jpg",
+  "resource_type": "image",
+  "created_at": "2025-02-13T18:51:08Z",
+  "tags": [],
+  "bytes": 118946,
+  "type": "upload",
+  "etag": "1816f061dd867274fd397414817aefad",
+  "placeholder": false,
+  "url": "http://res.cloudinary.com/duilaadex/image/upload/v1739472668/iiki0t2tgsak6dkm7dtd.jpg",
+  "secure_url": "https://res.cloudinary.com/duilaadex/image/upload/v1739472668/iiki0t2tgsak6dkm7dtd.jpg",
+  "asset_folder": "",
+  "display_name": "selfie",
+  "original_filename": "selfie"
+}
